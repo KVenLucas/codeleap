@@ -73,12 +73,11 @@ export const Posts = ({ children }: CreatePostProps) => {
           <h3>CodeLeap Network</h3>
 
           <NavLink
-            to="/"
+            to="/signup"
             style={{ marginRight: 37 }}
             title="Logout"
             onClick={() => {
               localStorage.clear()
-              window.location.reload()
             }}
           >
             <Logout />
