@@ -26,7 +26,6 @@ export const DeletePost = ({ isOpen, onRequestClose }: DeletePostProps) => {
         dispatch(deleteArticle(Number(postId)))
       }
     } catch (e) {
-      // TODO Handle feedback error
       window.location.reload()
     }
   }

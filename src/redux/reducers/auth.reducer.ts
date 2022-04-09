@@ -23,13 +23,7 @@ export const authSlice = createSlice({
   initialState,
 
   reducers: {
-    setUser: (state, action: PayloadAction<Auth>) => {
-      return {
-        auth: { ...action.payload, active: true },
-      }
-    },
-
-    getUser: (state, action: PayloadAction<Auth>) => {
+    setUser: (_state, action: PayloadAction<Auth>) => {
       return {
         auth: { ...action.payload, active: true },
       }
@@ -37,7 +31,7 @@ export const authSlice = createSlice({
   },
 })
 
-export const { setUser, getUser } = authSlice.actions
+export const { setUser } = authSlice.actions
 
 export const selectAuth = (state: RootState) => state.auth
 export default authSlice.reducer

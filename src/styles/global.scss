@@ -59,17 +59,13 @@ button {
   border: 0;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 
 
   &:hover {
     transition: 0.3s ease;
     background-color: var(--grey)
   }
-}
-
-
-button {
-  cursor: pointer;
 }
 
 a {

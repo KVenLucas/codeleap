@@ -62,7 +62,7 @@ export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
         reset()
       }
     } catch (e) {
-      // TODO Handle Error feeback
+      window.location.reload()
     }
 
     navigate('/main', { replace: true })

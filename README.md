@@ -1,7 +1,6 @@
-
 # CodeLeap Network - Front End Enginner
- 
- Codeleap Network - Connect with anyone around the world
+
+Codeleap Network - Connect with anyone around the world
 
 ## Autores
 
@@ -13,19 +12,19 @@
 
 ## Instalação
 
-* O projeto utiliza o gerenciador NVM 
-* Versão mínima do Node v16.0.0
+- O projeto utiliza o gerenciador NVM
+- Versão mínima do Node v16.0.0
 
 ```bash
   nvm use
 ```
 
+Instale com npm ou yarn
 
-Instale com npm ou yarn 
 ```bash
   npm | yarn install
 ```
-    
+
 ## Rodando localmente
 
 Clone o projeto
@@ -52,11 +51,9 @@ Inicie o servidor
   npm | yarn dev
 ```
 
-
 ## Variáveis de Ambiente
 
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
-
 
 `IMPORT` = import.meta.env.VITE_API_URL
 
@@ -65,6 +62,3 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 #
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=KVenLucas_codeleap)
-
-
-
