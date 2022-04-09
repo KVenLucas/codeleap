@@ -1,0 +1,79 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  self-align: center;
+  height: 80px;
+  padding: 27px 0 27px;
+  background-color: var(--black);
+
+
+  h3 {
+    margin-left: 37px;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 25.78px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    self-align: center;
+    vertical-align: center;
+
+    &:hover {
+
+
+      svg {
+        fill: var(--grey);
+        transition: 0.2s ease;
+      }
+    }
+
+  }
+
+
+}
+
+.content {
+  height: 100%;
+  background-color: var(--background);
+  padding: 44px 38px 0 38px;
+
+
+  .post {
+    border: 1px solid #999999;
+    width: 100%;
+    min-height: 379px;
+    height: 100%;
+
+    padding: 0 30px 0 30px;
+    justify-self: center;
+    align-content: center;
+
+    span {
+      display: flex;
+      width: 100%;
+      padding-top: 23px;
+
+      h3 {
+        font-size: 22px;
+        line-height: 25.78px;
+        font-weight: bold;
+      }
+    }
+
+
+  }
+
+
+}
+
+
+
+
+
+
+
