@@ -50,8 +50,6 @@ export const articlesSlice = createSlice({
     updateArticle: (state, action: PayloadAction<Arcticle>) => {
       state.articles.forEach((T, index) => {
         if (T.id === action.payload.id) {
-          console.log(action.payload)
-
           state.articles.splice(index, 1, { ...action.payload })
         }
       })
