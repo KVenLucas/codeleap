@@ -1,0 +1,222 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+
+body {
+  background: var(--grey-light-background);
+  -webkit-font-smoothing: antialiased;
+
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --grey: #777777;
+  --grey-light-background: #DDDDDD;
+  --grey-light: #CCCCCC;
+  --border: var(--grey);
+  --placeholder: var(--grey-light);
+  --background: var(--white);
+  --button: var(--black);
+
+}
+
+
+body,
+input,
+textarea,
+select,
+button {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+button {
+  width: 111px;
+  margin-top: 22px;
+  background-color: var(--button);
+  color: var(--white);
+  height: 33px;
+  border: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+
+
+  &:hover {
+    transition: 0.3s ease;
+    background-color: var(--grey)
+  }
+}
+
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+input {
+  height: 28px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 13px;
+
+}
+
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 13px;
+  height: 74px;
+}
+
+
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.react-modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: filter 0.2s;
+
+}
+
+.react-modal-content {
+  width: 100%;
+  max-width: 576px;
+  background: var(--background);
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.25rem;
+
+}
+
+.react-modal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8)
+  }
+
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+
+.ReactModal__Overlay--after-open {
+  animation: fadein 1.2s;
+  -moz-animation: fadein 1.2s;
+  -webkit-animation: fadein 1.2s;
+  -o-animation: fadein 1.2s;
+
+}
+
+.ReactModal__Overlay--before-close {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+}
+
+
+form {
+  margin-top: 34px;
+
+  h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+
+  input {
+    margin-top: 7px;
+  }
+
+  textarea {
+    margin-top: 7px;
+  }
+
+
+}
+
+
