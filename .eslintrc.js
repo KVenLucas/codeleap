@@ -31,12 +31,17 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/extensions': 'off',
     'jsx-a11y/interactive-supports-focus': 'off',
-    // '@typescript-eslint/dot-notation': 'off',
-    // 'react/react-in-jsx-scope': 'off',
-    // 'jsx-a11y/accessible-emoji': 'off',
-    // 'react/prop-types': 'off',
-    // '@typescript-eslint/explicit-function-return-type': 'off',
     'no-shadow': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
+    '@typescript-eslint/naming-convention': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['state'],
+      },
+    ],
     '@typescript-eslint/no-shadow': [
       'warn',
       { ignoreTypeValueShadow: true, ignoreFunctionTypeParameterNameValueShadow: true },

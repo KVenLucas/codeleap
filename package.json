@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "codeleap",
   "version": "0.0.1",
   "homepage": "github-page/",
   "scripts": {
@@ -14,14 +14,35 @@
     "pre-commit-lint": "yarn type-check && yarn lint-staged"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.8.8",
+    "@reduxjs/toolkit": "^1.8.1",
+    "axios": "^0.26.1",
+    "debounce": "^1.2.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.29.0",
+    "react-modal": "^3.14.4",
+    "react-redux": "^7.2.8",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "svgo": "^2.8.0",
+    "vite-plugin-svgr": "^1.1.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.18",
+    "@types/debounce": "^1.2.1",
     "@types/node": "^16.9.6",
+    "@types/prettier": "^2.4.4",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
+    "@types/react-modal": "^3.13.1",
+    "@types/react-redux": "^7.1.23",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/svgo": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "@vitejs/plugin-react": "^1.0.7",
@@ -38,6 +59,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
     "prettier": "^2.3.2",
+    "sass": "^1.49.11",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3",
     "vite": "^2.7.2"

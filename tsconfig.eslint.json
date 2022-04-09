@@ -8,6 +8,6 @@
     "*.ts",
     "*.tsx",
     // these are the eslint-only inclusions
-    ".eslintrc.js"
+    ".eslintrc"
   ]
 }
