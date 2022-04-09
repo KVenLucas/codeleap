@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+  position: relative;
+
+
+  .header {
+    background-color: var(--black);
+    margin-top: 35px;
+    padding: 24px 30px 23.75px 30px;
+
+
+    .content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      span {
+        width: 100%;
+      }
+
+      .navContainer {
+
+        display: flex;
+
+        .nav {
+          position: relative;
+
+          ul {
+            display: flex;
+            list-style: none;
+
+          }
+
+
+          .links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+
+            a {
+
+              svg:hover {
+                cursor: pointer;
+
+
+                path {
+                  fill: var(--grey);
+                  transform: scale(1.1);
+                  transition: filter 0.3s;
+
+                }
+
+
+              }
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+
+    p {
+      color: white;
+    }
+
+
+    h3 {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26px;
+      word-break: break-word;
+    }
+
+
+  }
+
+
+  .postsContainer {
+    border: 1px solid var(--grey);
+    border-top: none;
+
+
+    .posts {
+      padding: 23px 31px 32px 30px;
+
+      h3 {
+        color: var(--grey);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        font-style: normal;
+
+      }
+
+
+      .postAuthor {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .postDate {
+        font-weight: 400;
+      }
+
+      .postContent {
+        margin-top: 17px;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21.09px;
+          color: var(--black);
+          word-break: break-word;
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+@media (max-width: 1080px) {
+
+  .postAuthor, .postsContainer {
+    flex-direction: column;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 16px;
+
+
+    }
+  }
+
+
+  .content {
+    flex-direction: column;
+
+
+    span {
+      order: 1;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 16px;
+      margin-top: 16px;
+
+    }
+
+
+  }
+
+
+}
