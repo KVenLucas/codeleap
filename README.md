@@ -7,7 +7,6 @@
 
 - [@KVenLucas](https://github.com/KVenLucas)
 
-
 ## Stack utilizada
 
 **Front-end:** React, Redux, SASS Modules
@@ -62,4 +61,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 `IMPORT` = import.meta.env.VITE_API_URL
 
 `VITE_API` = Endereço api
+
+#
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=KVenLucas_codeleap)
+
+
 
