@@ -73,7 +73,7 @@ export const Posts = ({ children }: CreatePostProps) => {
           <h3>CodeLeap Network</h3>
 
           <NavLink
-            to=""
+            to="/"
             style={{ marginRight: 37 }}
             title="Logout"
             onClick={() => {
