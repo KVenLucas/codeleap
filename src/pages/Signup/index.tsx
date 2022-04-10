@@ -22,7 +22,7 @@ type FormData = {
 }
 
 const schema = yup.object({
-  username: yup.string().required('Please inform username.'),
+  username: yup.string().required('Please inform username.').trim(),
 })
 
 export const Signup = ({ isOpen, onRequestClose }: SignupProps) => {

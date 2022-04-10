@@ -21,8 +21,8 @@ type FormData = {
 }
 
 const schema = yup.object({
-  title: yup.string().required('Title is required.'),
-  content: yup.string().required('Content is required.').max(64),
+  title: yup.string().required('Title is required.').trim(),
+  content: yup.string().required('Content is required.').max(64).trim(),
 })
 
 interface CreatePostProps {
