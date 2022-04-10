@@ -1,10 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import ReactModal from 'react-modal'
 import { useNavigate, useParams } from 'react-router-dom'
 import * as yup from 'yup'
 
+import { Modal } from '~/components/common/Modal'
 import main from '~/main.module.scss'
 import { Arcticle, updateArticle } from '~/redux/reducers/articles.reducer'
 import { useAppDispatch } from '~/redux/store/store'
@@ -69,7 +69,7 @@ export const EditPost = ({ isOpen }: EditPostProps) => {
   }
 
   return (
-    <ReactModal
+    <Modal
       ariaHideApp={false}
       isOpen={isOpen}
       shouldCloseOnOverlayClick
@@ -123,6 +123,6 @@ export const EditPost = ({ isOpen }: EditPostProps) => {
           </div>
         </form>
       </section>
-    </ReactModal>
+    </Modal>
   )
 }

@@ -13,13 +13,15 @@ export const Modal = ({
   children,
   overlayClassName,
   className,
+  shouldCloseOnOverlayClick,
+  shouldCloseOnEsc,
 }: ModalProps) => {
   return (
     <ReactModal
       ariaHideApp={false}
       isOpen={isOpen}
-      shouldCloseOnOverlayClick={false}
-      shouldCloseOnEsc={false}
+      shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
+      shouldCloseOnEsc={shouldCloseOnEsc}
       onRequestClose={onRequestClose}
       overlayClassName={'react-modal-overlay' || overlayClassName}
       className={'react-modal-content' || className}
