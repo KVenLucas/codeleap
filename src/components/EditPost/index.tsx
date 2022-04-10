@@ -1,10 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import ReactModal from 'react-modal'
 import { useNavigate, useParams } from 'react-router-dom'
 import * as yup from 'yup'
 
-import { Modal } from '~/components/common/Modal'
 import main from '~/main.module.scss'
 import { Arcticle, updateArticle } from '~/redux/reducers/articles.reducer'
 import { useAppDispatch } from '~/redux/store/store'
@@ -15,7 +15,7 @@ import styles from './edit.post.module.scss'
 
 interface EditPostProps {
   isOpen: boolean
-  onRequestClose: () => void
+  onRequestClose?: () => void
 }
 
 type FormData = {
@@ -28,7 +28,7 @@ const schema = yup.object({
   content: yup.string().required('Content is required.').max(64),
 })
 
-export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
+export const EditPost = ({ isOpen }: EditPostProps) => {
   const { id } = useParams<{ id: string }>()
 
   const dispatch = useAppDispatch()
@@ -69,9 +69,14 @@ export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
   }
 
   return (
-    <Modal
+    <ReactModal
+      ariaHideApp={false}
       isOpen={isOpen}
-      onRequestClose={onRequestClose}
+      shouldCloseOnOverlayClick
+      shouldCloseOnEsc
+      onRequestClose={() => {
+        navigate('/', { replace: true })
+      }}
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
@@ -89,9 +94,8 @@ export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
               required
               placeholder="Hello world"
             />
+            <small className={main.error}>{errors.title?.message}</small>
           </label>
-
-          <small className={main.error}>{errors.title?.message}</small>
 
           <div style={{ marginTop: 19 }}>
             <label htmlFor="content-modal">
@@ -103,9 +107,9 @@ export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
                 name="content"
                 required
               />
-            </label>
 
-            <small className={main.error}>{errors.content?.message}</small>
+              <small className={main.error}>{errors.content?.message}</small>
+            </label>
           </div>
 
           <div className={main.bottom}>
@@ -119,6 +123,6 @@ export const EditPost = ({ isOpen, onRequestClose }: EditPostProps) => {
           </div>
         </form>
       </section>
-    </Modal>
+    </ReactModal>
   )
 }

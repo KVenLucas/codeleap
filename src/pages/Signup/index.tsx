@@ -57,20 +57,22 @@ export const Signup = ({ isOpen, onRequestClose }: SignupProps) => {
         <div className={styles.content}>
           <h3>Welcome to CodeLeap network!</h3>
 
-          <span>
-            <p>Please enter your username</p>
-          </span>
+          <label htmlFor="username">
+            <span>
+              <p>Please enter your username</p>
+            </span>
 
-          <input
-            placeholder="Jonh Doe"
-            id="username"
-            type="text"
-            {...register('username')}
-            name="username"
-            required
-          />
+            <input
+              placeholder="Jonh Doe"
+              id="username"
+              type="text"
+              {...register('username')}
+              name="username"
+              required
+            />
 
-          <p className={main.error}>{errors.username?.message}</p>
+            <p className={main.error}>{errors.username?.message}</p>
+          </label>
 
           <div>
             <button
